@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  color: var(--dark-pri-text, #dcd6e6);
+}
+
+:host ::ng-deep {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  p {
+    color: var(--dark-pri-text, #dcd6e6);
+    text-align: center;
+    padding: 2rem;
+  }
+}

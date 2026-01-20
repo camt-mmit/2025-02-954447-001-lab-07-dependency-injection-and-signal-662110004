@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+}
+
+:host {
+  display: block;
+  color: var(--dark-pri-text, #dcd6e6);
+}
+
+:host ::ng-deep {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+}
+
+.page-title {
+  color: var(--dark-primary-two, #f08fb6);
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}

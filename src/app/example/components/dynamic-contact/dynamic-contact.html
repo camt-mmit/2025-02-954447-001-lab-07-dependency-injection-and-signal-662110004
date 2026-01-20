@@ -1,0 +1,13 @@
+<header>
+  <button type="button" (click)="addContact()">+ Contact</button>
+</header>
+
+<ul>
+  @for(contact of contact(); track contact) {
+  <li>
+    <app-dynamic-tel [number]="$index + 1" [contact]="contact" [removable]="$count > 1"
+      (contactChange)="changeContact($index, $event)" (remove)="removeContact($index)">
+    </app-dynamic-tel>
+  </li>
+  }
+</ul>
