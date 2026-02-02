@@ -2,12 +2,20 @@
   <label class="input-label">
     <b>Number</b>
     <b class="index">{{ index + 1 }}</b>
+
     <input
     class="-cl-input"
     type="number"
-    [(ngModel)]="value"
+    [(ngModel)]="internalValue"
     (ngModelChange)="onModelChange($event)"
     />
+
   </label>
-  <button class="btn-remove" type="button" (click)="onRemove()" [disabled]="!removable">✕</button>
+  <button
+  class="btn-remove"
+  type="button"
+  (click)="onRemove()"
+  [disabled]="!removable">
+    ✕
+  </button>
 </div>

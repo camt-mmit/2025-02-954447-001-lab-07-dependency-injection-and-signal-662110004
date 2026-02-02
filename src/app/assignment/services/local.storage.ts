@@ -13,7 +13,7 @@ export class LocalStorage {
       const v = JSON.parse(raw);
       if (Array.isArray(v)) return v;
       return [[0]];
-    } catch (e) {
+    } catch {
       return [[0]];
     }
   }
@@ -21,7 +21,7 @@ export class LocalStorage {
   save(sections: number[][]) {
     try {
       localStorage.setItem(this.KEY, JSON.stringify(sections));
-    } catch (e) {
+    } catch {
       // ignore
     }
   }
