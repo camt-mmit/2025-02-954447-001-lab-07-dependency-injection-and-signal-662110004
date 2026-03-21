@@ -3,12 +3,6 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-
-    redirectTo: 'example',
-    pathMatch: 'full',
+    loadChildren: () => import('./facebook/routes').then((m) => m.default),
   },
-
-  { path: 'example', loadChildren: () => import('./example/routes').then((m) => m.default) },
-
-  { path: 'assignment', loadChildren: () => import('./assignment/routes').then((m) => m.default) },
 ];

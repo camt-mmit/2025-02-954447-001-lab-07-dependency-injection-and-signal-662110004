@@ -1,0 +1,73 @@
+@if (!hasClientId()) {
+<div class="no-client">
+  <span class="material-symbols-outlined warn">warning</span>
+  <span>client ID for 'facebook' not found</span>
+  <a routerLink="../setting" class="goto-setting">Goto Setting
+    <span class="material-symbols-outlined">open_in_new</span>
+  </a>
+</div>
+} @else if (!isLoggedIn()) {
+<div class="center">
+  <button class="btn-login" (click)="login()">
+    <span class="material-symbols-outlined">login</span> Signin to Facebook
+  </button>
+</div>
+} @else {
+<div class="user-bar">
+  @if (user()) {
+  <img [src]="user()!.picture?.data?.url" [alt]="user()!.name" class="avatar" />
+  <span class="username">{{ user()!.name }}</span>
+  }
+  <button class="btn-logout" (click)="logout()" title="Logout">
+    <span class="material-symbols-outlined">logout</span>
+  </button>
+</div>
+
+<div class="filter-bar">
+  <input type="text" class="filter-input" placeholder="Filter by name…" [ngModel]="filter()"
+    (ngModelChange)="filter.set($event)" />
+  <button class="btn-clear" (click)="clearFilter()" title="Clear filter">
+    <span class="material-symbols-outlined">close</span>
+  </button>
+</div>
+
+<div class="likes-list">
+  @for (like of filteredLikes(); track like.id) {
+  <div class="like-card">
+    <div class="like-header">
+      <span class="like-time">{{ like.created_time | date:'fullDate' }}, {{ like.created_time | date:'HH:mm:ss z'
+        }}</span>
+      @if (like.cover?.source) {
+      <a [href]="like.cover!.source" target="_blank" class="btn-icon" title="Go to link">
+        <span class="material-symbols-outlined">open_in_new</span>
+      </a>
+      }
+    </div>
+    @if (like.cover?.source) {
+    <img [src]="like.cover!.source" [alt]="like.name" class="like-img" />
+    }
+    @if (like.name) {
+    <p class="like-name">{{ like.name }}</p>
+    }
+  </div>
+  } @empty {
+  @if (!loading()) {
+  <p class="empty">No liked pages found.</p>
+  }
+  }
+</div>
+
+@if (loading()) {
+<p class="loading">Loading…</p>
+}
+
+@defer (on viewport; prefetch on immediate) {
+@if (hasMore()) {
+<div class="load-trigger">
+  <span class="material-symbols-outlined">expand_more</span>
+</div>
+}
+} @placeholder {
+<div class="scroll-sentinel"></div>
+}
+}

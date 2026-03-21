@@ -1,0 +1,43 @@
+.home-page {
+  padding: 1.25rem 0;
+}
+
+.info-table {
+  border-collapse: collapse;
+  background: var(--fb-surface);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--fb-border);
+  width: 100%;
+
+  th,
+  td {
+    padding: 0.75rem 1.25rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--fb-border);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  tr:last-child th,
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  th {
+    font-weight: 700;
+    white-space: nowrap;
+    color: var(--fb-text-secondary);
+    font-size: 0.9rem;
+    width: 9rem;
+    background: var(--fb-surface-raised);
+  }
+
+  td {
+    color: var(--fb-text);
+    font-size: 1rem;
+  }
+}

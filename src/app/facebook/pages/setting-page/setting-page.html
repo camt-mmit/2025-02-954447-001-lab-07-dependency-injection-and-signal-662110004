@@ -1,0 +1,7 @@
+<div class="setting-page">
+  <div class="field-row">
+    <label for="clientId"><strong>Client ID</strong></label>
+    <input id="clientId" type="text" class="client-input" placeholder="xxxxxxxxxxxxxxxxxxxx" [ngModel]="clientIdInput()"
+      (ngModelChange)="clientIdInput.set($event); save()" />
+  </div>
+</div>

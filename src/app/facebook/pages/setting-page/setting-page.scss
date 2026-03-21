@@ -1,0 +1,44 @@
+.setting-page {
+  padding: 1.25rem 0;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--fb-surface);
+  border: 1px solid var(--fb-border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+
+  label {
+    white-space: nowrap;
+    min-width: 6rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--fb-text-secondary);
+  }
+}
+
+.client-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--fb-border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: var(--fb-surface-hover);
+  color: var(--fb-text);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+
+  &::placeholder {
+    color: var(--fb-text-secondary);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--fb-blue);
+    box-shadow: 0 0 0 3px rgba(35, 116, 225, 0.18);
+  }
+}

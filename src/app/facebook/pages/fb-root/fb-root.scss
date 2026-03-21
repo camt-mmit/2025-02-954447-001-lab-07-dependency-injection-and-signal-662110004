@@ -1,0 +1,79 @@
+.fb-layout {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ── Header ── */
+.fb-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  .angular-logo {
+    width: 9rem;
+    flex-shrink: 0;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--fb-blue);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ── Navigation ── */
+.fb-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--fb-border);
+  padding-bottom: 1rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 1rem;
+    border: 1px solid var(--fb-border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--fb-text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: var(--fb-surface);
+    transition:
+      background 0.15s,
+      border-color 0.15s,
+      color 0.15s;
+
+    .material-symbols-outlined {
+      font-size: 1.15rem;
+    }
+
+    &.active {
+      background: var(--fb-blue-faint);
+      border-color: var(--fb-blue);
+      color: var(--fb-blue);
+    }
+
+    &:hover:not(.active) {
+      background: var(--fb-surface-hover);
+      border-color: var(--fb-surface-hover);
+      color: var(--fb-text);
+    }
+  }
+}
+
+/* ── Content area ── */
+.fb-content {
+  width: 100%;
+}

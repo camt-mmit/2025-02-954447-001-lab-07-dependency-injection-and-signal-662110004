@@ -1,0 +1,181 @@
+.no-client {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  color: #e67e00;
+
+  .warn {
+    color: #e67e00;
+  }
+}
+
+.goto-setting {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  .material-symbols-outlined {
+    font-size: 1rem;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  color: inherit;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.user-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+
+  .avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .username {
+    font-weight: 500;
+  }
+}
+
+.btn-logout {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+
+  .material-symbols-outlined {
+    font-size: 1.2rem;
+  }
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+
+  .filter-input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: transparent;
+    color: inherit;
+  }
+}
+
+.btn-clear {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.likes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.like-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.75rem;
+  overflow: hidden;
+}
+
+.like-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  .like-time {
+    font-size: 0.85rem;
+    opacity: 0.75;
+  }
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  padding: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  .material-symbols-outlined {
+    font-size: 1.1rem;
+  }
+}
+
+.like-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.like-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.empty,
+.loading {
+  text-align: center;
+  opacity: 0.6;
+  padding: 1rem 0;
+}
+
+.scroll-sentinel {
+  height: 1px;
+}
+
+.load-trigger {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  opacity: 0.5;
+}
